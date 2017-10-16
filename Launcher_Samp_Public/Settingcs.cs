@@ -158,8 +158,8 @@ namespace Launcher_Samp_Public
             }
             catch(Exception err)
             {
-                
-                //SetDefault();
+                MessageBox.Show(err.Message);
+                SetDefault();
             }
         }
     }
