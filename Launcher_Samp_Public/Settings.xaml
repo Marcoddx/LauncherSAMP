@@ -1,0 +1,67 @@
+﻿<Page x:Class="Launcher_Samp_Public.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      mc:Ignorable="d" 
+      Height="400" Width="696"
+      Title="Settings">
+
+    <Grid>
+
+        <Rectangle HorizontalAlignment="Left" Height="328" Margin="10,62,0,0" VerticalAlignment="Top" Width="676">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.825"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="676" Background="#FF3F51B5"/>
+        <Label Content="Настройки" HorizontalAlignment="Left" Margin="21,18,0,0" VerticalAlignment="Top" Width="261" Height="37" FontSize="20" FontWeight="Bold" FontStyle="Italic" FontFamily="StratumNo2"/>
+        <DockPanel VerticalAlignment="Center" Margin="21,73,221,292" Height="35">
+            <Label Name="hFps" DockPanel.Dock="Left" FontWeight="Bold" Width="150" FontSize="16" Margin="0,3,0,7">Ограничение FPS:</Label>
+            <TextBox Text="{Binding ElementName=fpslimit, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" 
+                     Width="40" FontSize="18" />
+            <Slider Maximum="90" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" Name="fpslimit" 
+                    ValueChanged="FpsLimit_ValueChanged" Margin="0,3,0,7" Width="242" Minimum="20" Value="50" Foreground="#FF3F51B5" />
+        </DockPanel>
+        <DockPanel VerticalAlignment="Center" Margin="21,113,221,252" Height="35">
+            <Label Name="hPagesize" DockPanel.Dock="Left" FontWeight="Bold" Width="114" FontSize="16">Строк в чате:</Label>
+            <TextBox Text="{Binding ElementName=pagesize, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" 
+                     Width="40" FontSize="18" />
+            <Slider Maximum="20" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="pagesize" 
+                    ValueChanged="Pagesize_ValueChanged" Margin="0,0,0,10" Width="277" Minimum="10" Value="15" Foreground="#FF3F51B5" />
+        </DockPanel>
+        <CheckBox Content="" HorizontalAlignment="Left" Margin="45,148,0,226" 
+                  Width="25" Height="25" Name="headmove" BorderBrush="Cyan" IsChecked="True" OpacityMask="Red" Background="#FF3F51B5"/>
+        <Label Name="hHead" DockPanel.Dock="Left" FontWeight="Bold" FontSize="16" Margin="76,147,384,226">Отключить поворот головы</Label>
+
+
+        <CheckBox  Content="" HorizontalAlignment="Left" Margin="45,174,0,202" 
+            Width="25" Height="25" x:Name="timestamp" Background="#FF3F51B5"/>
+        <Label x:Name="hTimes" FontWeight="Bold" FontSize="16" Margin="76,174,369,197" Content="Отображение времени в чате"/>
+
+
+        <CheckBox  Content="" HorizontalAlignment="Left" Margin="45,200,0,175" 
+            Width="25" Height="25" x:Name="ime" Background="#FF3F51B5"/>
+        <Label x:Name="hime" FontWeight="Bold" FontSize="16" Margin="76,200,321,173" Content="Включить IME (Input Method Editor)"/>
+
+        <CheckBox  Content="" HorizontalAlignment="Left" Margin="45,228,0,147" 
+            Width="25" Height="25" x:Name="dmode" Background="#FF3F51B5"/>
+        <Label x:Name="hdirectmode" FontWeight="Bold" FontSize="16" Margin="76,228,221,146" Content="Рендеринг TextDraw прямо на экран (медленно)"/>
+
+        <CheckBox Content="" HorizontalAlignment="Left" Margin="45,255,0,118" 
+            Width="26" Height="auto" x:Name="audiomsgoff" Background="#FF3F51B5"/>
+        <Label x:Name="haudiomsgoff" FontWeight="Bold" FontSize="16" Margin="76,255,174,118" Content="Выключить сообщения проигрываемого аудио потока"/>
+
+        <CheckBox  Content="" HorizontalAlignment="Left" Margin="45,282,0,95" 
+            Width="26" Height="auto" x:Name="nonametagstatus" Background="#FF3F51B5"/>
+        <Label x:Name="hnonametagstatus" FontWeight="Bold" FontSize="16" Margin="76,282,321,85" Content="Выключить состояние в имени тэга"/>
+
+        <CheckBox  Content="" HorizontalAlignment="Left" Margin="45,310,0,67" 
+            Width="26" Height="auto" x:Name="fontweight" Background="#FF3F51B5" />
+        <Label x:Name="hFontWeight" FontWeight="Bold" FontSize="16" Margin="76,308,321,59" Content="Полужирный шрифт"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="334,349,0,0" VerticalAlignment="Top" Width="104" FontStyle="Italic" TextOptions.TextHintingMode="Animated" Click="Button_Click"/>
+        <Button Content="Вернуть исходные настройки" HorizontalAlignment="Left" Margin="443,349,0,0" VerticalAlignment="Top" Width="231" Click="Button_Click_1"/>
+    </Grid>
+</Page>

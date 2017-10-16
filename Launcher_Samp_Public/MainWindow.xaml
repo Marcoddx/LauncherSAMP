@@ -1,0 +1,45 @@
+﻿<Window x:Class="Launcher_Samp_Public.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SA:MP Lancher" Height="535" Width="793.5" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background/2.jpg"/>
+        </Grid.Background>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="788" Background="#FF3F51B5" OpacityMask="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}"/>
+        <Frame Name="frame" HorizontalAlignment="Left" Height="397" Margin="0,45,0,0" VerticalAlignment="Top" Width="778" Source="/Launcher_Samp_Public;component/Main.xaml" NavigationUIVisibility="Hidden" SnapsToDevicePixels="True"/>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="788" Background="#FF3F51B5" OpacityMask="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}" Margin="0,467,0,0">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF999999" Offset="0"/>
+                    <GradientStop Color="#FFBFBFBF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Label Margin="0,54,0,-54"/>
+        </Border>
+        <Label x:Name="NameServer" Margin="0,472,130,0" FontSize="16" FontFamily="Arial" Foreground="White" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Height="33">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.134"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.498"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="pingg" Content="Ping: 110ms" FontSize="16" FontFamily="Arial" Foreground="White" Margin="563,475,5,0" VerticalAlignment="Center" Height="32" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="Pass" Content="(!)SERVER PASSWORD(!) " HorizontalAlignment="Left" Margin="273,425,0,0" VerticalAlignment="Top" Width="209" FontWeight="Bold" FontFamily="Comic Sans MS" FontSize="16" Background="{x:Null}" Foreground="Red"/>
+        <Button Content="Начать играть" Height="Auto" Margin="0,0,577,453" Background="#FF3F51B5" BorderBrush="{x:Null}" Click="LoadMain"/>
+        <Button Content="Настройки" Height="Auto" Margin="216,0,361,453" Background="#FF3F51B5" BorderBrush="{x:Null}" Click="LoadPageSettings"/>
+        <Button Content="Вконтакте" Height="Auto" Margin="577,0,0,453" Background="#FF3F51B5" BorderBrush="{x:Null}" Click="Label_Click"/>
+    </Grid>
+
+</Window>
