@@ -11,8 +11,7 @@ namespace Launcher_Samp_Public
     {
         public string IP = "5.254.105.203";
         public int PORT = 7777;
-        public static int GroupID = 139495960; /// ID группы вставлять без - !!!!!!!!!!
-        
+        public static int GroupID = 33674733; /// ID группы вставлять без - !!!!!!!!!!
 
         public string UserName;
         public static string[] www;
