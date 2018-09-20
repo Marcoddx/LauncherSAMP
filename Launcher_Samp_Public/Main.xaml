@@ -17,7 +17,7 @@
         </Border>
         <Border Background="White" Margin="6,45,201,4">
             <ListView Name="users" Background="White" BorderBrush="#FFEC0000" 
-                  OpacityMask="#FFF00000"/>
+                  OpacityMask="#FFF00000" VirtualizingPanel.ScrollUnit="Pixel"/>
         </Border>
         
 
